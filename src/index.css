@@ -1,0 +1,57 @@
+/* Leaflet CSS — moet vóór Tailwind staan */
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand base */
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+  background: #FFFFFF;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography — altijd uppercase voor headings */
+h1, h2, h3, h4, .label-upper {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Geen afgeronde hoeken */
+*, button, input, select, textarea {
+  border-radius: 0 !important;
+}
+
+/* Leaflet kaart hoogte */
+.kaart-container {
+  height: calc(100vh - 64px);
+}
+
+/* Perceel geselecteerd stijl */
+.perceel-selected {
+  stroke: #000000 !important;
+  stroke-width: 2.5 !important;
+  fill: #CBE6C7 !important;
+  fill-opacity: 0.5 !important;
+}
+
+.perceel-hover {
+  stroke: #000000 !important;
+  stroke-width: 1.5 !important;
+  fill: #CBE6C7 !important;
+  fill-opacity: 0.2 !important;
+}
+
+/* Stap indicator lijn */
+.stap-lijn {
+  height: 2px;
+  background: #E6E6E6;
+}
+.stap-lijn.actief {
+  background: #000000;
+}
