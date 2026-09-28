@@ -30,3 +30,12 @@ src/
 - **Fase 2:** Backend + Supabase + leadcapture HubSpot
 - **Fase 3:** Fiscale regelengine + subsidie-database
 - **Fase 4:** Anthropic API voor AI-scenario's + rapportgeneratie
+
+## Online versie (GitHub Pages)
+
+Elke push naar `main` bouwt de app automatisch en zet hem live op
+https://reinoud01.github.io/boerenAI/ (workflow: `.github/workflows/deploy.yml`).
+
+Wil je de kennisbank-zoekfunctie (Supabase) ook online aan hebben, zet dan in de repo
+onder Settings → Secrets and variables → Actions de secrets `VITE_SUPABASE_URL` en
+`VITE_SUPABASE_ANON_KEY`. Zonder die secrets werkt de rest van de app gewoon.
